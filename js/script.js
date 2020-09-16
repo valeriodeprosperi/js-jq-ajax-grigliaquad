@@ -12,6 +12,7 @@ $(document).ready(function(){
 // funzione click
 $(".square").click(function() {
     $(this).addClass("element");
+  
       // chiamata ajax
         $.ajax({
             "url":"https://flynn.boolean.careers/exercises/api/random/int",
