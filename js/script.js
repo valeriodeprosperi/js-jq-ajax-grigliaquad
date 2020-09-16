@@ -11,9 +11,24 @@ $(document).ready(function(){
 
 // funzione click
 $(".square").click(function() {
-        $(this).addClass("selected");
-
-        }
+    $(this).addClass("element");
+      // chiamata ajax
+        $.ajax({
+            "url":"https://flynn.boolean.careers/exercises/api/random/int",
+            "method":"GET",
+            "success":function(data){
+                console.log(data.response);
+                if (data.response > 5) {
+                    $(".element").addClass("green").removeClass("element");
+                } else {
+                    $(".element").addClass("yellow").removeClass("element");
+                }
+            },
+            "error":function(){
+                alert("error");
+            }
+        })
+    });
    // copiato e incollato chimata ajax
    // $.ajax(
    // {
