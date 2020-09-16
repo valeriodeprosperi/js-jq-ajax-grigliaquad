@@ -10,8 +10,10 @@ $(document).ready(function(){
 });
 
 // funzione click
-$(".square").on("click", function(){
-   var selezionato = $(this);
+$(".square").click(function() {
+        $(this).addClass("selected");
+
+        }
    // copiato e incollato chimata ajax
    // $.ajax(
    // {
