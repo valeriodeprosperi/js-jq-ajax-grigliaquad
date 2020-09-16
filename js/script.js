@@ -2,9 +2,26 @@
 // Se è <= 5 il quadrato diventa giallo, se è > di 5 il quadrato diventa verde.
 // Il numero ottenuto appare al centro del quadrato.
 
-
+// creo quadrati con for
 $(document).ready(function(){
   for (var i = 0; i < 36; i++) {
           $('.container').append('<div class="square"></div>');
       }
 });
+
+// funzione click
+$(".square").on("click", function(){
+   var selezionato = $(this);
+   // copiato e incollato chimata ajax
+   // $.ajax(
+   // {
+   // url: "http://www.boolean.careers/api/random/boolean",
+   // method: "GET",
+   // success: function (data, stato) {
+   // $("#risultati").html(data);
+   // },
+   // error: function (richiesta, stato, errori) {
+   // alert("E' avvenuto un errore. " + errore);
+   // }
+   // }
+   // );
